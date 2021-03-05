@@ -1,1 +1,0 @@
-# Listed Link Palindrome
