@@ -18,7 +18,7 @@ try:
             code = line_list[-2]
             size = line_list[-1]
             if code in codes:
-              dict_counter[code] += 1
+                dict_counter[code] += 1
             total_size += int(size)
             counter += 1
 
