@@ -39,7 +39,7 @@ int is_stable(int grid[3][3])
 	return (1);
 }
 /**
- * sandpiles_simple_sum - adds sandpiles without toppling
+ * sandpiles_simple_sum
  * @grid1: grid1
  * @grid2: grid2
  * Return: nothing
