@@ -21,17 +21,17 @@ if __name__ == "__main__":
         sys.exit(1)
 
 
-def tracking(N, i=0, a=[], b=[], c=[]):
-    """Generates tracking of the solutions for the problem"""
+def bTracking(N, i=0, a=[], b=[], c=[]):
+    """Generates backtracking of the answers of the puzzle """
     if i < N:
         for j in range(N):
             if j not in a and i+j not in b and i-j not in c:
-                for solution in tracking(N, i+1, a+[j], b+[i+j], c+[i-j]):
-                    yield solution  # iterator
+                for ans in bTracking(N, i+1, a+[j], b+[i+j], c+[i-j]):
+                    yield ans  # iterator of the solutions
     else:
-        yield a
+        yield a # iterator of the first list with no answer
 
 
-for solution in tracking(N):
-    answer = [[col, row] for col, row in enumerate(solution)]
-    print(answer)
+for ans in bTracking(N):
+    resp = [[col, row] for col, row in enumerate(ans)]
+    print(resp)
