@@ -29,7 +29,7 @@ def bTracking(N, i=0, a=[], b=[], c=[]):
                 for ans in bTracking(N, i+1, a+[j], b+[i+j], c+[i-j]):
                     yield ans  # iterator of the solutions
     else:
-        yield a # iterator of the first list with no answer
+        yield a  # iterator of the first list with no answer
 
 
 for ans in bTracking(N):
